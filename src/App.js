@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import friendsImage from './friends.jpg'; // Ensure you have this image in your src folder
 
 function App() {
   const [students, setStudents] = useState([]);
@@ -115,7 +116,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1 className="title">Student Management System</h1>
+      <h1 className="title">Bakwas Friends</h1>
       {message.text && (
         <div className={`message ${message.type}`}>
           {message.text}
@@ -124,7 +125,7 @@ function App() {
 
       <div className="controls">
         <button className="add-button" onClick={() => setShowForm(true)}>
-          Add Student
+          Add 
         </button>
         <div className="search-box">
           <input
@@ -134,6 +135,14 @@ function App() {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
+      </div>
+
+      <div className="birthday-image-container">
+        <img 
+          src={friendsImage} 
+          alt="Friends " 
+          className="birthday-image"
+        />
       </div>
 
       {showForm && (

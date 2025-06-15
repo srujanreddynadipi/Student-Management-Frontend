@@ -92,3 +92,17 @@ code {
     font-size: 2rem;
   }
 }
+
+.birthday-image-container {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.birthday-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #007bff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
