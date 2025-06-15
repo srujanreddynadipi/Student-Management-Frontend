@@ -299,14 +299,12 @@ function App() {
                         </button>
                       </div>
                     ) : (
-                      {/* Delete button commented out temporarily
                       <button 
-                        className="btn btn-danger"
+                        className="delete-btn"
                         onClick={() => handleDelete(student._id)}
                       >
                         Delete
                       </button>
-                      */}
                     )}
                   </td>
                 </tr>
