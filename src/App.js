@@ -26,7 +26,8 @@ function App() {
   }, []);
 
   const fetchStudents = () => {
-    fetch('http://localhost:3000/api/students')
+    fetch('https://student-management-backend-mojl.onrender.com/api/students')
+
       .then(response => response.json())
       .then(data => {
         setStudents(data);
@@ -48,7 +49,7 @@ function App() {
 
   const handleDelete = (id) => {
     if (window.confirm('Are you sure you want to delete this student?')) {
-      fetch(`http://localhost:3000/api/students/${id}`, {
+      fetch(`https://student-management-backend-mojl.onrender.com/api/students/${id}`, {
         method: 'DELETE',
       })
       .then(response => {
@@ -74,8 +75,9 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const url = editingStudent 
-      ? `http://localhost:3000/api/students/${editingStudent._id}`
-      : 'http://localhost:3000/api/students';
+  ? `https://student-management-backend-mojl.onrender.com/api/students/${editingStudent._id}`
+  : 'https://student-management-backend-mojl.onrender.com/api/students';
+
     
     const method = editingStudent ? 'PUT' : 'POST';
 
